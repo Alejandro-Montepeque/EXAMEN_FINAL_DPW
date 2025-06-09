@@ -8,7 +8,71 @@
 <body>
     <!-- Este es el div donde va el navbar de arriba -->
     <div id="navbar-container"></div>
-    <h1>Pagina Principal</h1>
+    <div class="container mt-5">
+        <div class="row align-items-center">
+        <div class="col-md-7">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="public/assets/coche-deportivo-coupe-blanco-de-pie-en-la-carretera-vista-frontal.jpg" class="d-block w-100" alt="Imagen 1" />
+                </div>
+                <div class="carousel-item">
+                <img src="public/assets/coupe-deportivo-negro-con-luces-rojas-traseras-encendidas.jpg" class="d-block w-100" alt="Imagen 2" />
+                </div>
+                <div class="carousel-item">
+                <img src="public/assets/vista-posterior-y-lateral-de-un-coupe-de-plata-metalica-en-la-carretera.jpg" class="d-block w-100" alt="Imagen 3" />
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <h2>Vehiculos Deportivos</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac vestibulum erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>
+        </div>
+        </div>
+    </div>
+
+    <!-- Galería de cards -->
+    <div class="container mt-5">
+        <h2 class="mb-4">Galería (cards)</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100">
+            <img src="public/assets/luces-delanteras-de-xenon-de-un-coche-negro-amarillo-vista-superior.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+                <h5 class="card-title">Título 1</h5>
+                <p class="card-text">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100">
+            <img src="public/assets/conduccion-nocturna.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+                <h5 class="card-title">Título 2</h5>
+                <p class="card-text">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100">
+            <img src="public/assets/vista-frontal-de-un-coche-deportivo-sedan-negro-en-el-puente.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+                <h5 class="card-title">Título 3</h5>
+                <p class="card-text">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
    <!-- Este es el script para configurar que el navbar se pinte en cada pantalla que este presente el div mencionado -->
     <script type="module" src="/src/main.js"></script>
 </body>
