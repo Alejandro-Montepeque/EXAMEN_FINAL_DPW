@@ -8,8 +8,69 @@
 <body>
       <!-- Este es el div donde va el navbar de arriba -->
     <div id="navbar-container"></div>
-    <h1>Formulario</h1>
+    <div class="container mt-4">
+        <button id="addField" class="btn btn-primary mb-3">Agregar Persona</button>
+        <form id="dynamicForm"></form>
+        <button id="submitForm" class="btn btn-success mt-3">Enviar</button>
+    </div>
+
    <!-- Este es el script para configurar que el navbar se pinte en cada pantalla que este presente el div mencionado -->
     <script type="module" src="/src/main.js"></script>
+
+    <script>
+        let count = 0;
+
+        document.getElementById('addField').addEventListener('click', () => {
+            count++;
+
+            const form = document.getElementById('dynamicForm');
+
+            const group = document.createElement('div');
+            group.className = 'row g-3 mb-3';
+
+            group.innerHTML = `
+                <div class="col-md-3">
+                    <input type="text" class="form-control" name="nombre-${count}" placeholder="Nombre">
+                </div>
+                <div class="col-md-2">
+                    <input type="number" class="form-control" name="edad-${count}" placeholder="Edad">
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select" name="sexo-${count}">
+                        <option value="">Sexo</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <input type="date" class="form-control" name="fecha-${count}">
+                </div>
+            `;
+
+            form.appendChild(group);
+        });
+
+        document.getElementById('submitForm').addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const nombres = [];
+            const edades = [];
+            const sexos = [];
+            const fechas = [];
+
+            for (let i = 1; i <= count; i++) {
+                nombres.push(document.querySelector(`[name="nombre-${i}"]`)?.value || "");
+                edades.push(document.querySelector(`[name="edad-${i}"]`)?.value || "");
+                sexos.push(document.querySelector(`[name="sexo-${i}"]`)?.value || "");
+                fechas.push(document.querySelector(`[name="fecha-${i}"]`)?.value || "");
+            }
+
+            console.log("Nombres:", nombres);
+            console.log("Edades:", edades);
+            console.log("Sexos:", sexos);
+            console.log("Fechas de nacimiento:", fechas);
+        });
+    </script>
 </body>
 </html>
