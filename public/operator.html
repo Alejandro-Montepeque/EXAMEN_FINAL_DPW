@@ -5,33 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body class="p-4">
-      <!-- Este es el div donde va el navbar de arriba -->
+<body>
+    <!-- Este es el div donde va el navbar de arriba -->
     <div id="navbar-container"></div>
-    <h2>Calculadora Básica</h2>
+    <div class="py-4 g-4">
 
-  <div class="mb-3">
-    <label for="num1" class="form-label">Número 1</label>
-    <input type="number" class="form-control" id="num1">
-  </div>
-
-  <div class="mb-3">
-    <label for="num2" class="form-label">Número 2</label>
-    <input type="number" class="form-control" id="num2">
-  </div>
-
-  <div class="mb-3">
-    <button class="btn btn-primary me-2" onclick="sumar()">Sumar</button>
-    <button class="btn btn-secondary me-2" onclick="restar()">Restar</button>
-    <button class="btn btn-success me-2" onclick="multiplicar()">Multiplicar</button>
-    <button class="btn btn-danger me-2" onclick="dividir()">Dividir</button>
-    <button class="btn btn-warning" onclick="modulo()">Módulo</button>
-  </div>
-
-  <div id="resultado" class="alert alert-info">Resultado: </div>
+      <h2>Calculadora Básica</h2>
+  
+    <div class="mb-3">
+      <label for="num1" class="form-label">Número 1</label>
+      <input type="number" class="form-control" id="num1">
+    </div>
+  
+    <div class="mb-3">
+      <label for="num2" class="form-label">Número 2</label>
+      <input type="number" class="form-control" id="num2">
+    </div>
+  
+    <div class="mb-3">
+      <button class="btn btn-primary me-2" onclick="sumar()">Sumar</button>
+      <button class="btn btn-secondary me-2" onclick="restar()">Restar</button>
+      <button class="btn btn-success me-2" onclick="multiplicar()">Multiplicar</button>
+      <button class="btn btn-danger me-2" onclick="dividir()">Dividir</button>
+      <button class="btn btn-warning" onclick="modulo()">Módulo</button>
+    </div>
+  
+    <div id="resultado" class="alert alert-info">Resultado: </div>
+    </div>
    <!-- Este es el script para configurar que el navbar se pinte en cada pantalla que este presente el div mencionado -->
     <script type="module" src="/src/main.js"></script>
     <script>
+    
     function obtenerValores() {
       const n1 = parseFloat(document.getElementById("num1").value);
       const n2 = parseFloat(document.getElementById("num2").value);
